@@ -17,7 +17,10 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
-  metadataBase: new URL("https://example.com"),
+  // Next.js préfixe déjà automatiquement les routes internes (icône, image
+  // Open Graph...) avec `basePath` ("/mariage") : metadataBase ne doit
+  // contenir que l'origine, sinon le préfixe se retrouve dupliqué.
+  metadataBase: new URL("https://ibrahime66.github.io"),
 };
 
 export default function RootLayout({
